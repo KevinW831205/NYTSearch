@@ -1,0 +1,93 @@
+<!--Authors: Chi Lee, Peggy Liu, Shane Maziekien, Rich Pasqualon, Kevin Wang-->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NY Times</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Added link to the jQuery Library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/c99ec62ba2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-12 jumbotron jumbotron-fluid text-center" style="background-color: #00004d; color: #fff;">
+                <h1><i class="fa fa-newspaper-o" aria-hidden="true"></i> New York Times Search</h1>
+            </div>
+        </div>
+        
+        <div class="row my-4 px-0">
+            <div class="col-12 px-0">
+                <div class="card">
+                    <div class="card-header">
+                      <strong><i class="fa fa-id-card-o" aria-hidden="true"></i> Search Parameters</strong>
+                    </div>
+                    <div class="col-md-12 col-sm-12">
+                        <div id="form">
+                            <form class="block form-horizontal">
+                                <div class="form-group">
+                                  <label for="search" class="col-sm-12 control-label">Search Term:</label>
+                                  <div class="col-sm-12">
+                                    <input type="search" class="form-control" id="search" placeholder="search">
+                                  </div>
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="exampleFormControlSelect1">Number of Records to Retrieve:</label>
+                                    <select class="form-control" id="exampleFormControlSelect1">
+                                      <option>1</option>
+                                      <option>5</option>
+                                      <option>10</option>
+                                    </select>
+                                  </div>
+                                <div class="form-group">
+                                    <label for="start" class="col-sm-12 control-label">Start Year (Optional):</label>
+                                    <div class="col-sm-12">
+                                      <input type="start" class="form-control" id="start" placeholder="">
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="end" class="col-sm-12 control-label">End Year (Optional):</label>
+                                    <div class="col-sm-12">
+                                      <input type="end" class="form-control" id="end" placeholder="">
+                                    </div>
+                                  </div>
+                        
+                            </form>
+                            <p class="px-3">
+                                <button type="button" class="btn btn-secondary" id="runSearch">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    Search
+                                </button>
+                                <button type="button" class="btn btn-secondary" id="clearSearch">
+                                <i class="fa fa-trash" aria-hidden="true"></i> Clear Results
+                            </button>
+                            </p>
+                    </div>
+                </div>
+            </div>
+       
+ 
+                <div class="col-12 my-4 px-0">
+                    <div class="card">
+                        <div class="card-header">
+                          <strong><i class="fa fa-calendar" aria-hidden="true"></i>Top Articles</strong>
+                          
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <div id="articleDisplay">
+
+                            </div>
+                      </div>
+                </div>
+        </div>
+    
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
